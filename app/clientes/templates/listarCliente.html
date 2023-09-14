@@ -13,6 +13,16 @@
                 {{ mensaje }}
             </div>
         {% endfor %}
+        {% if current_user.is_authenticated %}
+            <li>
+                <a href="/auth/logout">Cierre de sesión</a>
+            </li>
+            {% else %}
+
+            <li>
+                <a href="/auth/login">Cierre de sesión</a>
+            </li>
+            {% endif %}
     <h1>Lista De Clientes 😎</h1>
 <table class="table tabla-bodered">
     <thead>
